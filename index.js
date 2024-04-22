@@ -1,3 +1,20 @@
+const form = document.getElementById('form')
+
+const captureData = (e) => {
+    e.preventDefault()
+    const n1 = document.getElementById('n1').value
+    const n2 = document.getElementById('n2').value
+    const n3 = document.getElementById('n3').value
+
+compareNumbers(n1, n2, n3)
+
+}
+
+form.addEventListener('submit', captureData)
+
+const {n1, n2, n3} = captureData
+
+
 const compareNumbers = (n1, n2, n3) => {
     const numberArr = [n1, n2, n3]
     const cloneArr1 =  structuredClone(numberArr)
@@ -20,16 +37,11 @@ const compareNumbers = (n1, n2, n3) => {
 
    for(number in numberArr) {
     if((numberArr[number] < numeroAlto
-        && numberArr[number] > numeroBajo)
-        || numberArr[number] === numeroAlto
-        || numberArr[number] === numeroBajo)
+        && numberArr[number] > numeroBajo))
         numeroMedio = numberArr[number]
    }
-
-
-
    
-    return {
+    const data = {
         numeroAlto,
         numeroBajo,
         numeroMedio,
@@ -37,7 +49,18 @@ const compareNumbers = (n1, n2, n3) => {
         sortlow,
         valorRepetido
     }
+
+    printData(data)
 }
 
+const printData = (data) => {
+const {numeroAlto, numeroBajo, numeroMedio, sortHig, sortlow, valorRepetido} = data
 
-compareNumbers(3, 1, 2)
+document.getElementById('higher').innerHTML = numeroAlto
+document.getElementById('lower').innerHTML = numeroBajo
+document.getElementById('middle').innerHTML = numeroMedio
+document.getElementById('sortLower').innerHTML = sortlow
+document.getElementById('sortHigher').innerHTML = sortHig
+document.getElementById('repeat').innerHTML = valorRepetido
+}
+
