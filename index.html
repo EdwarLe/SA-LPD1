@@ -4,18 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Lógica Programación 1</title>
 </head>
 
 <body>
-    <section class="main-continer">
+    <section class="main-container">
         <h1>Lógica de Programación 1</h1>
         <div class="input-container">
-            <form action="" id="form">
-                <input type="text" name="n1" id="n1">
-                <input type="text" name="n2" id="n2">
-                <input type="text" name="n3" id="n3">
-                <button type="submit" id="btn"> Validar</button>
+            <form action="" id="form" class="form-main">
+                <div class="input-contain">
+                    <label for="n1">
+                        Número 1
+                    </label>
+                    <input type="text" name="n1" id="n1" class="input-text">
+                </div>
+                <div class="input-contain">
+                    <label for="n2">
+                        Número 2
+                    </label>
+                    <input type="text" name="n2" id="n2" class="input-text">
+                </div>
+                <div class="input-contain">
+                    <label for="n3">
+                        Número 3
+                    </label>
+                    <input type="text" name="n3" id="n3" class="input-text">
+                </div>
+
+                <button type="submit" id="btn" class="btn-validar"> Validar</button>
             </form>
         </div>
         <div class="results">

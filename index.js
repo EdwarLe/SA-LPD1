@@ -2,9 +2,11 @@ const form = document.getElementById('form')
 
 const captureData = (e) => {
     e.preventDefault()
-    const n1 = document.getElementById('n1').value
-    const n2 = document.getElementById('n2').value
-    const n3 = document.getElementById('n3').value
+    const n1 = parseInt(document.getElementById('n1').value)
+    const n2 = parseInt(document.getElementById('n2').value)
+    const n3 = parseInt(document.getElementById('n3').value)
+    
+    // if(isNaN(n1)) 
 
 compareNumbers(n1, n2, n3)
 
@@ -54,13 +56,13 @@ const compareNumbers = (n1, n2, n3) => {
 }
 
 const printData = (data) => {
-const {numeroAlto, numeroBajo, numeroMedio, sortHig, sortlow, valorRepetido} = data
+    const {numeroAlto, numeroBajo, numeroMedio, sortHig, sortlow, valorRepetido} = data
 
-document.getElementById('higher').innerHTML = numeroAlto
-document.getElementById('lower').innerHTML = numeroBajo
-document.getElementById('middle').innerHTML = numeroMedio
-document.getElementById('sortLower').innerHTML = sortlow
-document.getElementById('sortHigher').innerHTML = sortHig
-document.getElementById('repeat').innerHTML = valorRepetido
+    document.getElementById('higher').innerHTML = numeroAlto
+    document.getElementById('lower').innerHTML = numeroBajo
+    document.getElementById('middle').innerHTML = numeroMedio
+    document.getElementById('sortLower').innerHTML = sortlow
+    document.getElementById('sortHigher').innerHTML = sortHig
+    document.getElementById('repeat').innerHTML = valorRepetido
 }
 
