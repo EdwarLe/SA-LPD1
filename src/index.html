@@ -21,18 +21,21 @@
                         Número 1
                     </label>
                     <input type="text" name="n1" id="n1" class="input-text">
+                    <span class="span-error" id="err1"> </span>
                 </div>
                 <div class="input-contain">
                     <label for="n2">
                         Número 2
                     </label>
                     <input type="text" name="n2" id="n2" class="input-text">
+                    <span class="span-error" id="err2"> </span>
                 </div>
                 <div class="input-contain">
                     <label for="n3">
                         Número 3
                     </label>
                     <input type="text" name="n3" id="n3" class="input-text">
+                    <span class="span-error" id="err3"> </span>
                 </div>
 
                 <button type="submit" id="btn" class="btn-validar"> Validar</button>
@@ -47,7 +50,10 @@
             <p>¿Se repite número?: <span id="repeat"></span></p>
         </div>
     </section>
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./utils/handlerError.js"></script>
+    <script type="module" src="./utils/captureData.js"></script>
+    <script type="module" src="./utils/printData.js"></script>
 </body>
 
 </html>

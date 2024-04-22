@@ -60,3 +60,9 @@ body {
     transform: scale(1.02);
     font-size: 17px;
 }
+
+.span-error {
+    color: rgb(255, 109, 109);
+    font-size: small;
+    margin-top: -2px;
+}
